@@ -25,7 +25,7 @@ public class wordCounter extends ConsoleProgram {
 		int wordCount =countWords(file);
 		int characterCount = countChar(file);
 		
-		println("File: lear.txt");
+		println("File: "+ dialog.getFile());
 		println("Lines = "+lines1);
 		println("Words = "+wordCount);
 		println("Characters = "+characterCount);

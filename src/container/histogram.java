@@ -35,7 +35,7 @@ public class histogram extends ConsoleProgram{
 		   
 		    file = ReadFile(path);
 		   sortingTheHistogram(file);
-		   println("0 - 9:" + nine);
+		   println("00 - 09:" + nine);
 		   println("10 - 19:" + nineteen);
 		   println("20 - 29:" + twenty9);
 		   println("30 - 39:" + thirty9);
@@ -45,7 +45,7 @@ public class histogram extends ConsoleProgram{
 		   println("70 - 79:" + seventy9);
 		   println("80 - 89:" + eighty9);
 		   println("90 - 99:" + ninty9);
-		   println("100:" + onehundred);
+		   println("    100:" + onehundred);
 		   
 	 }
 	 
@@ -56,11 +56,11 @@ public class histogram extends ConsoleProgram{
 		
 		 Collections.sort(file, Collections.reverseOrder());
 		 for(int i =0; i<file.size(); i++) {
-			 file.get(i);
+			 String[] st = file.get(i).split("\\s");
 
-			 grade = Integer.parseInt(file.get(i));
+			 grade = Integer.parseInt(st[0]);
 			 
-			 if(grade > 0) {
+			 if(grade < 0) {
 				 
 			 }else if(grade > 100) {
 				 
@@ -95,7 +95,6 @@ public class histogram extends ConsoleProgram{
 	private static ArrayList<String> ReadFile(String path) {
 			// TODO Auto-generated method stub
 		 ArrayList<String> data = new ArrayList<String>();
-		 int i = 0;
 		try {
 				
 

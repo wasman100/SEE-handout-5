@@ -16,10 +16,15 @@ public class wordCounter extends ConsoleProgram {
 	public void run() {
 
 		println("Please select the file you want to check");
+		
 		FileDialog dialog = new FileDialog((Frame) null, "Select File to Open");
+		
 		dialog.setMode(FileDialog.LOAD);
+		
 		dialog.setVisible(true);
+		
 		String path = dialog.getDirectory();
+		
 		path += dialog.getFile();
 
 		String file = ReadFile(path);
@@ -35,8 +40,7 @@ public class wordCounter extends ConsoleProgram {
 
 	private static int countChar(String file) {
 		// TODO Auto-generated method stub
-		String[] st = file.split("\\s*|,|\'");
-		return st.length;
+		return file.length();
 
 	}
 
